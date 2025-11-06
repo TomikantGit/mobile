@@ -59,7 +59,7 @@ export default function PublicarScreen({ pets, setPets, setScreen }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <LinearGradient colors={['#FF6B9D', '#C44569']} style={styles.header}>
+      <LinearGradient colors={['#FF8C42', '#E67E22']} style={styles.header}>
         <TouchableOpacity onPress={() => setScreen('home')} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
@@ -75,7 +75,7 @@ export default function PublicarScreen({ pets, setPets, setScreen }) {
       >
         <View style={styles.form}>
           <View style={styles.inputContainer}>
-            <Ionicons name="paw-outline" size={20} color="#FF6B9D" style={styles.inputIcon} />
+            <Ionicons name="paw-outline" size={20} color="#E67E22" style={styles.inputIcon} />
             <TextInput
               style={styles.input}
               placeholder="Tipo do pet (ex: Cachorro, Gato)"
@@ -86,7 +86,7 @@ export default function PublicarScreen({ pets, setPets, setScreen }) {
           </View>
 
           <View style={styles.inputContainer}>
-            <Ionicons name="heart-outline" size={20} color="#FF6B9D" style={styles.inputIcon} />
+            <Ionicons name="heart-outline" size={20} color="#E67E22" style={styles.inputIcon} />
             <TextInput
               style={styles.input}
               placeholder="Raça (ex: Vira-lata, Persa)"
@@ -97,7 +97,7 @@ export default function PublicarScreen({ pets, setPets, setScreen }) {
           </View>
 
           <View style={styles.inputContainer}>
-            <Ionicons name="time-outline" size={20} color="#FF6B9D" style={styles.inputIcon} />
+            <Ionicons name="time-outline" size={20} color="#E67E22" style={styles.inputIcon} />
             <TextInput
               style={styles.input}
               placeholder="Idade (ex: 2 anos, 6 meses)"
@@ -108,7 +108,7 @@ export default function PublicarScreen({ pets, setPets, setScreen }) {
           </View>
 
           <View style={styles.inputContainer}>
-            <Ionicons name="chatbox-outline" size={20} color="#FF6B9D" style={styles.inputIcon} />
+            <Ionicons name="chatbox-outline" size={20} color="#E67E22" style={styles.inputIcon} />
             <TextInput
               style={[styles.input, styles.textArea]}
               placeholder="Motivo da adoção"
@@ -135,7 +135,7 @@ export default function PublicarScreen({ pets, setPets, setScreen }) {
               </View>
             ) : (
               <View style={styles.uploadContent}>
-                <Ionicons name="camera-outline" size={50} color="#FF6B9D" />
+                <Ionicons name="camera-outline" size={50} color="#E67E22" />
                 <Text style={styles.uploadText}>Adicionar Foto</Text>
                 <Text style={styles.uploadSubtext}>Toque para selecionar</Text>
               </View>
@@ -232,7 +232,7 @@ const styles = StyleSheet.create({
     padding: 40,
   },
   uploadText: {
-    color: '#FF6B9D',
+    color: '#E67E22',
     fontSize: 18,
     fontWeight: '600',
     marginTop: 10
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   buttonPublish: {
-    backgroundColor: '#FF6B9D',
+    backgroundColor: '#FF8C42',
     padding: 18,
     borderRadius: 15,
     flexDirection: 'row',
@@ -274,7 +274,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 10,
     marginTop: 20,
-    shadowColor: '#FF6B9D',
+    shadowColor: '#FF8C42',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 8,

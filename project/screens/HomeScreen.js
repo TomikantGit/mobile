@@ -3,11 +3,28 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function HomeScreen({ setScreen }) {
+export default function HomeScreen({ setScreen, isLoggedIn }) {
   // tela inicial do app
   return (
-    <LinearGradient colors={['#FF6B9D', '#C44569']} style={styles.container}>
+    <LinearGradient colors={['#FF8C42', '#E67E22']} style={styles.container}>
       <View style={styles.header}>
+        <View style={styles.loginContainer}>
+          <TouchableOpacity
+            style={styles.loginButton}
+            onPress={() => setScreen('login')}
+            activeOpacity={0.8}
+          >
+            <Ionicons 
+              name={isLoggedIn ? "person" : "log-in-outline"} 
+              size={20} 
+              color="#fff" 
+            />
+            <Text style={styles.loginButtonText}>
+              {isLoggedIn ? "Perfil" : "Entrar"}
+            </Text>
+          </TouchableOpacity>
+        </View>
+        
         <Ionicons name="paw" size={80} color="#fff" style={styles.icon} />
         <Text style={styles.logo}>Audoção</Text>
         <Text style={styles.subtitle}>Conectando corações e patinhas 🐾</Text>
@@ -19,7 +36,7 @@ export default function HomeScreen({ setScreen }) {
           onPress={() => setScreen('adotar')}
           activeOpacity={0.8}
         >
-          <Ionicons name="heart" size={24} color="#C44569" style={styles.buttonIcon} />
+          <Ionicons name="heart" size={24} color="#E67E22" style={styles.buttonIcon} />
           <Text style={styles.buttonTextPrimary}>Quero Adotar</Text>
           <Text style={styles.buttonSubtext}>Encontre seu novo amigo</Text>
         </TouchableOpacity>
@@ -50,6 +67,29 @@ const styles = StyleSheet.create({
   header: {
     alignItems: 'center',
     marginTop: 20,
+    width: '100%',
+  },
+  loginContainer: {
+    position: 'absolute',
+    top: 0,
+    right: 30,
+    zIndex: 1,
+  },
+  loginButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    paddingHorizontal: 15,
+    paddingVertical: 8,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.3)',
+  },
+  loginButtonText: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: '500',
+    marginLeft: 5,
   },
   icon: {
     marginBottom: 20,
@@ -101,7 +141,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   buttonTextPrimary: {
-    color: '#C44569',
+    color: '#E67E22',
     fontWeight: 'bold',
     fontSize: 20,
     marginBottom: 4,

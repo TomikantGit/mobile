@@ -21,7 +21,7 @@ export default function AdotarScreen({ pets, setPets, setScreen }) {
       )}
       <View style={styles.cardContent} >
         <View style={styles.badge}>
-          <Ionicons name="paw" size={16} color="#FF6B9D" />
+          <Ionicons name="paw" size={16} color="#E67E22" />
           <Text style={styles.petType}>{item.tipo}</Text>
         </View>
         <Text style={styles.petName}>{item.raca}</Text>
@@ -43,7 +43,7 @@ export default function AdotarScreen({ pets, setPets, setScreen }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <LinearGradient colors={['#FF6B9D', '#C44569']} style={styles.header}>
+      <LinearGradient colors={['#FF8C42', '#E67E22']} style={styles.header}>
         <TouchableOpacity onPress={() => setScreen('home')} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
   badge: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#FFE5EF',
+    backgroundColor: '#FFE8D6',
     alignSelf: 'flex-start',
     paddingHorizontal: 12,
     paddingVertical: 6,
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     gap: 5,
   },
   petType: {
-    color: '#FF6B9D',
+    color: '#E67E22',
     fontWeight: '600',
     fontSize: 12,
     textTransform: 'capitalize',
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   btnConhecer: {
-    backgroundColor: '#FF6B9D',
+    backgroundColor: '#FF8C42',
     padding: 15,
     borderRadius: 15,
     marginTop: 15,
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
-    shadowColor: '#FF6B9D',
+    shadowColor: '#FF8C42',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 8,
