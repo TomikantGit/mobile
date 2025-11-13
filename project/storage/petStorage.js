@@ -1,23 +1,12 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-
-const PETS_KEY = 'pets';
+// Armazenamento em memória para Snack Expo
+let petsStorage = [];
 
 // busca os pets salvos
 export async function getPets() {
-  try {
-    const data = await AsyncStorage.getItem(PETS_KEY);
-    return data ? JSON.parse(data) : [];
-  } catch (e) {
-    console.log('Erro ao carregar pets:', e);
-    return [];
-  }
+  return petsStorage;
 }
 
 // salva a lista de pets
 export async function savePet(pets) {
-  try {
-    await AsyncStorage.setItem(PETS_KEY, JSON.stringify(pets));
-  } catch (e) {
-    console.log('Erro ao salvar pets:', e);
-  }
+  petsStorage = pets;
 }

@@ -1,18 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity, SafeAreaView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
-import { getPets } from '../storage/petStorage';
 
 export default function AdotarScreen({ pets, setPets, setScreen }) {
-  // carrega os pets salvos
-  useEffect(() => {
-    async function carregar() {
-      const data = await getPets();
-      if (data) setPets(data);
-    }
-    carregar();
-  }, []);
+  // pets já vêm do estado global do App
 
   const renderPet = ({ item }) => (
     <View style={styles.card}>
